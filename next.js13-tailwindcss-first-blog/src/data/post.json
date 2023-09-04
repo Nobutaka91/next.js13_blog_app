@@ -17,6 +17,18 @@
       "title": "Thank you for joining my live stream",
       "content": "I'm really kicking myself for not creating memoried this summer.🥹 But This live streamings are my love memories, deep in mind. This will go in my memory box.😊",
       "createdAt": "2022/08/31"
+    },
+    {
+      "id": "next.js13 test",
+      "title": "新規投稿をしてみる",
+      "content": "新規投稿APIが正しく機能するか確認",
+      "createdAt": "2023-09-04T16:49:25.026Z"
+    },
+    {
+      "id": "food",
+      "title": "玄米生活",
+      "content": "玄米は白米よりも食物繊維量が豊富らしい。さっそくamazonで高評価の玄米10kgを購入してみた。味も悪くない。",
+      "createdAt": "2023-09-04T16:57:17.601Z"
     }
   ]
 }

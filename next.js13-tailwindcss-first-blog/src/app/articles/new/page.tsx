@@ -8,12 +8,17 @@ const CreateBlogPage = () => {
   const [id, setId] = useState<string>('');
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // ページのリロードを防ぐ
     // console.log(id, title, content);
+    setLoading(true);
+
     await createArticle(id, title, content);
 
+    setLoading(false);
+    // 新規投稿した後に、ホーム画面に自動遷移する
     router.push('/');
     router.refresh();
   };
@@ -54,7 +59,12 @@ const CreateBlogPage = () => {
         </div>
         <button
           type="submit"
-          className="py-2 px-4 border rounded-md bg-orange-300"
+          className={`py-2 px-4 border rounded-md ${
+            loading
+              ? 'bg-orange-300 cursor-not-allowed '
+              : 'bg-orange-400 hover:bg-orange-500'
+          }`}
+          disabled={loading}
         >
           投稿
         </button>
